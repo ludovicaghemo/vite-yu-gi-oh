@@ -10,6 +10,9 @@ export default {
 </script>
 
 <template>
+    <header>
+        <h1 class="text-center py-4 fw-bolder">Yu-gi-oh</h1>
+    </header>
     
 </template>
 
