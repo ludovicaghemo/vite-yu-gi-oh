@@ -12,9 +12,8 @@ export default {
 
 <template>
   <div class="container">
-    <p class="text-end">Total: {{ store.cardsList.length }} cards</p>
+    <span class="text-end">Total: {{ store.cardsList.length }} cards</span>
   </div>
 </template>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

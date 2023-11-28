@@ -13,7 +13,6 @@ export default {
     <header>
         <h1 class="text-center py-4 fw-bolder">Yu-gi-oh</h1>
     </header>
-    
 </template>
 
 <style lang="scss" scoped>
@@ -22,5 +21,6 @@ export default {
 
 header {
     background-color: white;
+    margin-bottom: 2rem;
 }
 </style>

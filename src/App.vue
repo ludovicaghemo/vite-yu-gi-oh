@@ -34,7 +34,7 @@ export default {
     AppBody,
     AppSelect,
     CardsNumber
-},
+  },
   methods: {
     handleSelect() {
       axios.get(this.store.apiUrl, {
