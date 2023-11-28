@@ -1,6 +1,8 @@
 <script>
 import { store } from "../store";
 import AppCard from "./AppCard.vue";
+import AppLoading from "./AppLoading.vue";
+
 
 export default {
     data() {
@@ -8,14 +10,15 @@ export default {
             store
         }
     },
-    components: { AppCard }
+    components: { AppCard, AppLoading }
 }
 </script>
 
 <template>
     <div class="container pt-4">
-        <div class="row">
-            <div class="col-3 align-items-stretch" v-for="card in store.cardsList.data">
+        <AppLoading  v-if="store.loading"/>
+        <div class="row row-cols-5 g-4" v-else>
+            <div class="col" v-for="card in store.cardsList.data">
                 <AppCard :card="card"/>
             </div>
         </div>
@@ -26,9 +29,9 @@ export default {
     .container {
         width: 90%;
         max-width: 1100px;
-        margin: 0 auto;
-        background-color: #d48f38;
+        margin: 4rem auto;
+        background-color: white;
         color: white;
-        padding: 0 2rem;
+        padding: 2rem;
     }
 </style>

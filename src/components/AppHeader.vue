@@ -20,4 +20,7 @@ export default {
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 
+header {
+    background-color: white;
+}
 </style>
