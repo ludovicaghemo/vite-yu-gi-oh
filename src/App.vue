@@ -5,6 +5,7 @@ import AppHeader from './components/AppHeader.vue';
 import { store } from "./store.js";
 import AppBody from './components/AppBody.vue';
 import AppSelect from "./components/AppSelect.vue";
+import CardsNumber from "./components/CardsNumber.vue";
 
 //dichiarare componenti
 export default {
@@ -31,11 +32,12 @@ export default {
   components: {
     AppHeader,
     AppBody,
-    AppSelect
-  },
+    AppSelect,
+    CardsNumber
+},
   methods: {
     handleSelect() {
-      axios.get(this.store.apiArchUrl, {
+      axios.get(this.store.apiUrl, {
         params: {
           archetype: this.store.selectedOption,
           num: 20,
@@ -53,6 +55,7 @@ export default {
   <!-- utilizzare componenti-->
   <AppHeader />
   <AppSelect @showCards="handleSelect" />
+  <CardsNumber />
   <AppBody />
 </template>
 
